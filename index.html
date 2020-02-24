@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<link href="estilo.css" rel="stylesheet">
+	<head>
+	<body>
+		<div id='contenedor'>
+			<script>
+				function myFunction() {
+					var checkBox = document.getElementById("boton_menu");
+					var lateral = document.getElementById("menu_lateral");
+					var contenido = document.getElementById("contenido");
+					if (checkBox.checked == true){
+						lateral.style.display = "block";
+						contenido.style.width = "70%";
+					} else {
+						lateral.style.display = "none";
+						contenido.style.width = "95%";
+					}
+				}	
+			</script>
+			<div id='cuerpo'>
+				<div id='menu_oculto'>
+					<div class='contenido_padding'>
+						<header>
+							<input type='checkbox' id='boton_menu' onclick="myFunction()">
+							<label for='boton_menu'><img src='menu.png' width='50' height='50'></label>
+						</header>
+					</div>
+				</div>
+				<div id='menu_lateral'>
+					<ul class='lista_menu'>
+						<li id='menu_1'>Menu principal</li>
+							<ul class='lista_menu'>
+								<li>
+									<a href='index.html'>Inicio</a>
+								</li>
+								<li>
+									<a href='contenido.html'>Contenido</a>
+								</li>
+								<li>
+									<a href='contactar.html'>Contactar</a>
+								</li>
+							</ul>
+						<li id='menu_1'>Otros menus</li>
+							<ul class='lista_menu'>
+								<li>
+									<a href='agradecimientos.html'>Agradecimientos</a>
+								</li>
+								<li>
+									<a href='https://github.com/Guillermo-C-A/prueba-import-coffee-ucm'>Github de la web</a>
+								</li>
+							</ul>						
+					</ul>
+					<hr/>
+					<div style='padding:30px'>
+						<p style='color: white'>
+							Web creada por Guillermo C.A, estudiante de la facultada de estudios estadísticos
+							y miembro de la asociación Import Coffee.
+						</p>
+					</div>
+				</div>
+				<div id='contenido'>
+					<div class='contenido_padding'>
+						<div id='logo'>
+							<img src='encabezado.png'/>
+						</div>
+						<p>
+							<h1>¿Quiénes somos?</h1>
+							<hr/>
+							Bienvenido a la web de la asociación de programación de Import Coffee de la facultada de
+							estudios estadísticos de la Universidad Complutense de Madrid. Aquí podrás encontrar
+							informacion sobre lenguajes, tutoriales y ¡Mucho más!. Así que tomate un café y relájate
+							en nuestra web :)
+						</p>
+						<div>
+							<div style='width:33%;float:left;'>
+								<img src='ucm.gif'
+								width="200" height="200"/>
+							</div>
+							<div style='width:33%;float:left;'>
+								<img src='estadistica.gif'
+								width="200" height="200"/>
+							</div>
+							<div style='width:33%;float:left;'>
+								<img src='logo.png'
+								width="200" height="200"/>
+							</div>
+						</div>
+						<p>
+							<h1>Contenido de la web</h1>
+							<hr/>
+							<p>
+							En esta web encontraras material relacionado con el mundo de la programación e informática junto con algunos temas variopintos
+							como pueden ser: big data, algoritmos, redes neuronales, machine learning, etc...
+							</p>
+							<p>
+							Los principales lenguajes de programación que podrás encontrar aquí son: Python, Matlab, R, MySQL, C++ y SAS, pero también puedes
+							llevarte una sorpresa y encontrar algo de sobre un lenguaje de programación que no hemos nombrado así que estate atento a la
+							web y de sus posibles cambios.
+							</p>
+						</p>
+						<p>
+							<h1>Conócenos más a fondo</h1>
+							<hr/>
+							<p>
+							Nuestra historia comienza a  mediados/finales de 2019 donde un grupo de alumnos de la facultad de Estadística Aplicada se juntaron
+							para crear una asociación de programación llamada Import Coffee. Actualmente somos un grupo reducido pero si deseas tomar parte en este
+							proyecto, ¡por favor contacta con nosotros :) !
+							</p>
+							<p>
+							Actualmente y debido a nuestro grupo reducido tenemos pocos proyectos (pero proyectos muy chulos y grandes :D ). Entre los proyectos más
+							destacados de la asociación tenemos: la propia web de la asociación, talleres de programación, aplicaciones varias, ¡y mucho más!
+							</p>
+							<p>
+							Estos somos nosotros (un grupo fabuloso de apasionados por la programación y tecnología) :D
+							</p>
+							<p>
+							[Descripción e imagen individual de cada miembro de la asociación]
+							</p>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<link href="estilo.css" rel="stylesheet">
+	<head>
+	<script>
+		function myFunction() {
+			var checkBox = document.getElementById("boton_menu");
+			var lateral = document.getElementById("menu_lateral");
+			var contenido = document.getElementById("contenido");
+			if (checkBox.checked == true){
+				lateral.style.display = "block";
+				contenido.style.width = "70%";
+			}else {
+				lateral.style.display = "none";
+				contenido.style.width = "95%";
+			}
+		}	
+	</script>
+	<body>
+		<div id='contenedor'>
+			<div id='cuerpo'>
+				<div id='menu_oculto'>
+					<div class='contenido_padding'>
+						<header>
+							<input type='checkbox' id='boton_menu' onclick="myFunction()">
+							<label for='boton_menu' ><img src='menu.png' width='50' height='50'></label>
+						</header>
+					</div>
+				</div>
+				<div id='menu_lateral'>
+					<ul class='lista_menu'>
+						<li id='menu_1'>Menu principal</li>
+							<ul class='lista_menu'>
+								<li>
+									<a href='index.html'>Inicio</a>
+								</li>
+								<li>
+									<a href='contenido.html'>Contenido</a>
+								</li>
+								<li>
+									<a href='contactar.html'>Contactar</a>
+								</li>
+							</ul>
+						<li id='menu_1'>Otros menus</li>
+							<ul class='lista_menu'>
+								<li>
+									<a href='agradecimientos.html'>Agradecimientos</a>
+								</li>
+								<li>
+									<a href='https://github.com/Guillermo-C-A/prueba-import-coffee-ucm'>Github de la web</a>
+								</li>
+							</ul>						
+					</ul>
+					<hr/>
+					<div style='padding:30px'>
+						<p style='color: white'>
+							Web creada por Guillermo C.A, estudiante de la facultada de estudios estadísticos
+							y miembro de la asociación Import Coffee.
+						</p>
+					</div>
+
+				</div>
+				<div id='contenido'>
+					<div class='contenido_padding'>
+						<div id='logo'>
+							<img src='encabezado.png'/>
+						</div>
+						<p>
+							<h1>¡Accede a nuestro contenido!</h1>
+							<hr/>
+							En esta sección encontraras enlaces para acceder a nuestro contenido alojado en Google Drive/Mega,
+							Github, Kaggle, Youtube y... !Mucho mas¡. Dentro de los enlaces podrás encontrar: tutoriales, guías, scripts,
+							programas, algunas competiciones de kaggle resueltas por nosotros, contenido de talleres pasados y futuros, etc...
+						</p>
+						<p>
+							Además de todo lo anterior, en un futuro próximo también podrás acceder a los datos de nuestros proyectos
+							(estaciones meteorológicas), sensores, bases de datos, etc... Por no olvides visitar esta sección de la web :D . 
+							En lo que a los enlaces respecta, tenemos:
+							
+							<ul>
+								<li>GitHub: </li>
+								<li>Mega: </li>
+								<li>Google Drive: </li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
