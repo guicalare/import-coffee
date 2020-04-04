@@ -12,20 +12,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link href="estilo.css" rel="stylesheet">
 	</head>
-	<style> 
-
-		@keyframes travolta {
-		  0%   {left:0%; top:0%;}
-		  50% {left:50%; top:0%;}
-		  100% {left:0%; top:0%;}
-		}
-
-		@keyframes error {
-		  0%   {left:50%; top:0%;}
-		  50% {left:0%; top:0%;}
-		  100% {left:50%; top:0%;}
-		}
-	</style>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
@@ -75,12 +61,13 @@
 					Si el error persiste, no dudes en escribirnos a:
 				</p>
 				<h3><b>importcoffee@ucm.es</b></h3>
-				<b/r>
-				<div style="position: relative; animation-name: travolta;animation-duration: 4s;animation-iteration-count: 1000;">
-					<img class="img-responsive" src="https://media.giphy.com/media/JY5dig6xQ9S7u/giphy.gif" style="position:absolute;z-index: 1;">
-				</div>
-				<div style="position: relative; animation-name: error;animation-duration: 4s;animation-iteration-count: 1000;">
-					<img class="img-responsive" src="http://www.techtricksworld.com/wp-content/uploads/2015/12/Error-404.png" style="position:absolute;z-index: -1;">
+				<div class="row">
+					<div class="col-sm-3 col-md-6">
+						<img class="img-responsive" src="https://media.giphy.com/media/JY5dig6xQ9S7u/giphy.gif">
+					</div>
+					<div class="col-sm-9 col-md-6">
+						<img class="img-responsive" src="http://www.techtricksworld.com/wp-content/uploads/2015/12/Error-404.png">
+					</div>
 				</div>
 			</div>
 		</div>
