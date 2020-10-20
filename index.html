@@ -135,7 +135,7 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="thumbnail" style="border:0px">
-						<img src="https://image.flaticon.com/icons/png/512/401/401775.png">
+						<img id="huevo_pascua" src="https://image.flaticon.com/icons/png/512/401/401775.png">
 					</div>
 				</div>
 			</div>
@@ -266,4 +266,19 @@
 			</br>
 		</div>
 	</body>
+	<script>
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			return vars;
+		}
+		
+		var huevo_pascua = getUrlVars()["agua"];
+		
+		if (huevo_pascua == "True") {
+			document.getElementById("huevo_pascua").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/122155488_727884967935779_5565973961149330449_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=8OLKf4irfeYAX9GhA1p&_nc_tp=18&oh=4307d52f1a424dbf4bbd87c6c45be06a&oe=5FB7A873";
+		}
+	</script>
 </html>
