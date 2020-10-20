@@ -57,7 +57,7 @@
 					<div class="col-md-3 col-sm-6">
 						<div class="our-team">
 							<div class="pic">
-								<img src="images/verdi.jpg" alt="">
+								<img id="verdi" src="images/verdi.jpg" alt="">
 								<div class="social_media_team">
 									<ul class="team_social">
 										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
@@ -81,7 +81,7 @@
 					<div class="col-md-3 col-sm-6">
 						<div class="our-team">
 							<div class="pic">
-								<img src="images/roberto.jpg" alt="">
+								<img id="roberto" src="images/roberto.jpg" alt="">
 								<div class="social_media_team">
 									<ul class="team_social">
 										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
@@ -159,7 +159,7 @@
 					<div class="col-md-3 col-sm-6">
 						<div class="our-team">
 							<div class="pic">
-								<img src="images/guillermo.jpg" alt="">
+								<img id="guillermo" src="images/guillermo.jpg" alt="">
 								<div class="social_media_team">
 									<ul class="team_social">
 										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
@@ -183,7 +183,7 @@
 					<div class="col-md-3 col-sm-6">
 						<div class="our-team">
 							<div class="pic">
-								<img src="images/gonzalo.jpg" alt="">
+								<img id="gonzalo" src="images/gonzalo.jpg" alt="">
 								<div class="social_media_team">
 									<ul class="team_social">
 										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
@@ -207,7 +207,7 @@
 					<div class="col-md-3 col-sm-6">
 						<div class="our-team">
 							<div class="pic">
-								<img src="images/carmen.jpg" alt="">
+								<img id="carmen" src="images/carmen.jpg" alt="">
 								<div class="social_media_team">
 									<ul class="team_social">
 										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
@@ -357,4 +357,23 @@
 			</br>
 		</div>
 	</body>
+	<script>
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			return vars;
+		}
+		
+		var huevo_pascua = getUrlVars()["perros"];
+		
+		if (huevo_pascua == "True") {
+			document.getElementById("verdi").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/116362545_603983587155666_1892951153596332828_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=IFj7Bue1QfAAX9WOA6Z&_nc_tp=18&oh=c8fe536f8db83b5586545f3a58972b13&oe=5FBA1ECA";
+			document.getElementById("roberto").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/117934650_364795677844810_2964568637421318394_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=rfsuIXdbMFoAX8A0JGc&_nc_tp=18&oh=6b39c9166ff4401f04606e80efd12479&oe=5FB8076F";
+			document.getElementById("guillermo").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/72226963_198413678155093_5011168451321995527_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=bnLy-UPfaxsAX-6c3Pb&_nc_tp=18&oh=cf5432578cbc8035c79370c53770bd13&oe=5FBA5428";
+			document.getElementById("carmen").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/98324038_1085668135161589_6767074004598492046_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=87WZkW3vaHUAX_9Sg3s&_nc_tp=18&oh=2477a5d1184600ba8e46ff6471216ff5&oe=5FBA90B0";
+			document.getElementById("gonzalo").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/117819872_990354998043337_5832814796553465544_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=ynBPoicz8e4AX9G1PMv&_nc_tp=18&oh=353e8f2da92113625d1e8bb68b95306a&oe=5FB70ABA";
+		}
+	</script>
 </html>
