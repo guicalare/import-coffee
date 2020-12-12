@@ -12,7 +12,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link href="estilo.css" rel="stylesheet">
 	</head>
-	<body>
+	<body id="body_">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -32,6 +32,9 @@
 						<li   class="active"><a href="contacto.html">Contacto</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+						<form class="navbar-form navbar-left" style="margin-right:0px;margin-left:0px;color:#9d9d9d;">
+							<button type="button" class="btn btn-warning" onclick="dm()">Dark mode</button>
+						</form>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 								<span class="flag-icon flag-icon-es"></span>
@@ -47,7 +50,7 @@
 				</div>
 			</div>
 		</nav>
-	<div class="container" style='margin-top:50px;min-height: 100vh;'>
+	<div class="container" style='margin-top:50px;min-height: 100vh;' id="container_">
 		<div class="jumbotron" style="background:transparent !important">
 			<h2><b>Contacta con nosotros</b></h2>
 			<hr>
@@ -69,14 +72,14 @@
 	</div>
 		<div class="footer text-center" style='background-color:#101010'>
 			</br>
-			<h2>Con la colaboración de:</h2>
+			<h2 class="white-text">Con la colaboración de:</h2>
 			</br>
 			<div class='row' style='margin-right: 0px;margin-left: 0px'>
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">UCM</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
+							<h3 class="media-heading white-text">UCM</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
 							<div class="modal fade" id="ucm" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -94,7 +97,7 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
+											<p>
 											Muchas gracias a la UCM y en especial a la facultad de estudios estadísticos
 											por apoyar este proyecto/asociación dotándonos de los materiales y consejos
 											que necesitamos.
@@ -116,8 +119,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Bla6</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
+							<h3 class="media-heading white-text">Bla6</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
 							<div class="modal fade" id="bla6" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -135,10 +138,10 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
-											Gracias a Bla6 por ayudarnos con la resolución de dudas y ayuda para la creación
-											de esta web. Bla6 es un profesional del diseño web y Sysadmin. No te olvides de
-											visitar su Gitlab para ver sus proyectos personales.
+											<p>
+												Gracias a Bla6 por ayudarnos con la resolución de dudas y ayuda para la creación
+												de esta web. Bla6 es un profesional del diseño web y Sysadmin. No te olvides de
+												visitar su Gitlab para ver sus proyectos personales.
 											</p>
 											<a href='https://gitlab.com/bla6' class="btn btn-info" role="button">Gitlab</a>
 										</div>
@@ -154,8 +157,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Carlos</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
+							<h3 class="media-heading white-text">Carlos</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
 							<div class="modal fade" id="carlos" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -174,8 +177,8 @@
 										</div>
 										<div class="modal-body">
 											<p class="text-justify">
-											Gracias a Carlos por su profesional trabajo en la creación del logo para la
-											asociación así como animaciones y demás artwork.
+												Gracias a Carlos por su profesional trabajo en la creación del logo para la
+												asociación así como animaciones y demás artwork.
 											</p>
 											<a href='https://www.behance.net/carlosalmendros8' class="btn btn-info" role="button">Behance</a>
 										</div>
@@ -192,4 +195,30 @@
 			</br>
 		</div>
 	</body>
+	<script>
+		function mantener_dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				document.getElementById("container_").classList.add("dark-mode-container");
+				document.getElementById("body_").classList.add("dark-mode-body");
+			}else{
+				document.getElementById("container_").classList.remove("dark-mode-container");
+				document.getElementById("body_").classList.remove("dark-mode-body");
+			}		
+		}
+		function dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				localStorage.setItem('dm', false);
+			}else{
+				localStorage.setItem('dm', true);
+			}
+			var element = document.getElementById("container_");
+			element.classList.toggle("dark-mode-container");
+			var element = document.getElementById("body_");
+			element.classList.toggle("dark-mode-body");
+		}
+		if(localStorage.getItem('dm') == null){
+			localStorage.setItem('dm', false);
+		}
+		mantener_dm();
+	</script>
 </html>

@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="https://e6t7a8v2.stackpathcdn.com/tutorial/css/fontawesome-all.min.css">
 		<link href="estilo.css" rel="stylesheet">
 	</head>
-	<body style="background: #202830;">
+	<body id="body_">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -33,6 +33,9 @@
 						<li><a href="contacto.html">Contacto</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+						<form class="navbar-form navbar-left" style="margin-right:0px;margin-left:0px;color:#9d9d9d;">
+							<button type="button" class="btn btn-warning" onclick="dm()">Dark mode</button>
+						</form>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 								<span class="flag-icon flag-icon-es"></span>
@@ -48,9 +51,9 @@
 				</div>
 			</div>
 		</nav>
-	<div class="container" style='margin-top:50px;min-height: 100vh;'>
+	<div class="container" style='margin-top:50px;min-height: 100vh;' id="container_">
 		<div class="jumbotron" style="background:transparent !important">
-			<h2 style="color:white"><b>Junta directiva</b></h2>
+			<h2><b>Junta directiva</b></h2>
 			<hr>
 			<div class="container">
 				<div class="row">
@@ -69,7 +72,7 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Verdi Esteban Rey Blanco</a>
+									Verdi Esteban Rey Blanco<a></a>
 									<small>Presidente</small>
 								</h3>
 								<p class="description">
@@ -93,7 +96,7 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Roberto Carlos Saavedra Baylón</a>
+									Roberto Carlos Saavedra Baylón<a></a>
 									<small>Vicepresidente</small>
 								</h3>
 								<p class="description">
@@ -117,7 +120,7 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Diego Fernández Baena</a>
+									Diego Fernández Baena<a></a>
 									<small>Secretario general</small>
 								</h3>
 								<p class="description">
@@ -141,7 +144,7 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Tomás González Cano</a>
+									Tomás González Cano<a></a>
 									<small>Tesorero</small>
 								</h3>
 								<p class="description">
@@ -152,7 +155,7 @@
 					</div>
 				</div>
 			</div>
-			<h2 style="color:white"><b>Miembros y asociados</b></h2>
+			<h2><b>Miembros y asociados</b></h2>
 			<hr>
 			<div class="container">
 				<div class="row">
@@ -171,8 +174,8 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Guillermo Calvo Arenaza</a>
-									<small>Principal programador</small>
+									Guillermo Calvo Arenaza<a></a>
+									<small>Programador principal</small>
 								</h3>
 								<p class="description">
 									Desarollador de software y páginas web de Import Coffee.
@@ -195,7 +198,7 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Gonzalo Rey Sanz</a>
+									Gonzalo Rey Sanz<a></a>
 									<small>Vocal y miembro</small>
 								</h3>
 								<p class="description">
@@ -219,7 +222,7 @@
 							</div>
 							<div class="team-prof">
 								<h3 class="post-title">
-									<a href="#">Carmen Alcántara de la Maza</a>
+									Carmen Alcántara de la Maza<a></a>
 									<small>Vocal y miembro</small>
 								</h3>
 								<p class="description">
@@ -231,17 +234,72 @@
 				</div>
 			</div>
 		</div>
+		<h2><b>Anuario de miembros</b></h2>
+		<hr>
+		</div>
+		<div class="container">
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default" style="border-color: rgb(34, 34, 34);border:0;">
+			  <div class="panel-heading" style="background-color:rgb(34, 34, 34)">
+				<h4 class="panel-title">
+				  <a style="color:white;" class="btn btn-warning" data-toggle="collapse" data-parent="#accordion" href="#2019-2020">Miembros destacados 2019-2020</a>
+				</h4>
+			  </div>
+			  <div id="2019-2020" class="panel-collapse collapse in" style="background-color:#f8f8ff;">
+				<div class="panel-body">
+					<table class="table table-hover">
+						<thead>
+						  <tr>
+							<th>Cargo</th>
+							<th>Miembro</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>Presidente</td>
+							<td>Verdi Esteban Rey Blanco</td>
+						  </tr>
+						  <tr>
+							<td>Vicepresidente</td>
+							<td>Roberto Carlos Saavedra Baylón</td>
+						  </tr>
+						  <tr>
+							<td>Secretario general</td>
+							<td>Diego Fernández Baena</td>
+						  </tr>
+						  <tr>
+							<td>Tesorero</td>
+							<td>Tomás González Cano</td>
+						  </tr>
+						  <tr>
+							<td>Miembro y encargado web</td>
+							<td>Guillermo Calvo Arenaza</td>
+						  </tr>
+						  <tr>
+							<td>Vocal y miembro</td>
+							<td>Gonzalo Rey Sanz</td>
+						  </tr>
+						  <tr>
+							<td>Vocal y miembro</td>
+							<td>Carmen Alcántara de la Maza</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			  </div>
+			</div>
+		</div>
 	</div>
 		<div class="footer text-center" style='background-color:#101010'>
 			</br>
-			<h2>Con la colaboración de:</h2>
+			<h2 class="white-text">Con la colaboración de:</h2>
 			</br>
 			<div class='row' style='margin-right: 0px;margin-left: 0px'>
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">UCM</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
+							<h3 class="media-heading white-text">UCM</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
 							<div class="modal fade" id="ucm" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -259,7 +317,7 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
+											<p>
 											Muchas gracias a la UCM y en especial a la facultad de estudios estadísticos
 											por apoyar este proyecto/asociación dotándonos de los materiales y consejos
 											que necesitamos.
@@ -281,8 +339,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Bla6</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
+							<h3 class="media-heading white-text">Bla6</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
 							<div class="modal fade" id="bla6" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -300,10 +358,10 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
-											Gracias a Bla6 por ayudarnos con la resolución de dudas y ayuda para la creación
-											de esta web. Bla6 es un profesional del diseño web y Sysadmin. No te olvides de
-											visitar su Gitlab para ver sus proyectos personales.
+											<p>
+												Gracias a Bla6 por ayudarnos con la resolución de dudas y ayuda para la creación
+												de esta web. Bla6 es un profesional del diseño web y Sysadmin. No te olvides de
+												visitar su Gitlab para ver sus proyectos personales.
 											</p>
 											<a href='https://gitlab.com/bla6' class="btn btn-info" role="button">Gitlab</a>
 										</div>
@@ -319,8 +377,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Carlos</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
+							<h3 class="media-heading white-text">Carlos</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
 							<div class="modal fade" id="carlos" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -339,8 +397,8 @@
 										</div>
 										<div class="modal-body">
 											<p class="text-justify">
-											Gracias a Carlos por su profesional trabajo en la creación del logo para la
-											asociación así como animaciones y demás artwork.
+												Gracias a Carlos por su profesional trabajo en la creación del logo para la
+												asociación así como animaciones y demás artwork.
 											</p>
 											<a href='https://www.behance.net/carlosalmendros8' class="btn btn-info" role="button">Behance</a>
 										</div>
@@ -358,22 +416,29 @@
 		</div>
 	</body>
 	<script>
-		function getUrlVars() {
-			var vars = {};
-			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-				vars[key] = value;
-			});
-			return vars;
+		function mantener_dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				document.getElementById("container_").classList.add("dark-mode-container");
+				document.getElementById("body_").classList.add("dark-mode-body");
+			}else{
+				document.getElementById("container_").classList.remove("dark-mode-container");
+				document.getElementById("body_").classList.remove("dark-mode-body");
+			}		
 		}
-		
-		var huevo_pascua = getUrlVars()["perros"];
-		
-		if (huevo_pascua == "True") {
-			document.getElementById("verdi").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/116362545_603983587155666_1892951153596332828_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=IFj7Bue1QfAAX9WOA6Z&_nc_tp=18&oh=c8fe536f8db83b5586545f3a58972b13&oe=5FBA1ECA";
-			document.getElementById("roberto").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/117934650_364795677844810_2964568637421318394_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=rfsuIXdbMFoAX8A0JGc&_nc_tp=18&oh=6b39c9166ff4401f04606e80efd12479&oe=5FB8076F";
-			document.getElementById("guillermo").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/72226963_198413678155093_5011168451321995527_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=bnLy-UPfaxsAX-6c3Pb&_nc_tp=18&oh=cf5432578cbc8035c79370c53770bd13&oe=5FBA5428";
-			document.getElementById("carmen").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/98324038_1085668135161589_6767074004598492046_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=87WZkW3vaHUAX_9Sg3s&_nc_tp=18&oh=2477a5d1184600ba8e46ff6471216ff5&oe=5FBA90B0";
-			document.getElementById("gonzalo").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/117819872_990354998043337_5832814796553465544_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=ynBPoicz8e4AX9G1PMv&_nc_tp=18&oh=353e8f2da92113625d1e8bb68b95306a&oe=5FB70ABA";
+		function dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				localStorage.setItem('dm', false);
+			}else{
+				localStorage.setItem('dm', true);
+			}
+			var element = document.getElementById("container_");
+			element.classList.toggle("dark-mode-container");
+			var element = document.getElementById("body_");
+			element.classList.toggle("dark-mode-body");
 		}
+		if(localStorage.getItem('dm') == null){
+			localStorage.setItem('dm', false);
+		}
+		mantener_dm();
 	</script>
 </html>

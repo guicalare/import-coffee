@@ -11,8 +11,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link href="estilo.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	</head>
-	<body>
+	<body id="body_">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -30,9 +33,11 @@
 						<li class="active"><a href="index.html">Inicio</a></li>
 						<li><a href="equipo.html">Equipo</a></li>
 						<li><a href="contacto.html">Contacto</a></li>
-						<li><a href="https://guillermo-c-a.github.io/prueba/">Blog</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+						<form class="navbar-form navbar-left" style="margin-right:0px;margin-left:0px;color:#9d9d9d;">
+							<button type="button" class="btn btn-warning" onclick="dm()">Dark mode</button>
+						</form>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 								<span class="flag-icon flag-icon-es"></span>
@@ -48,110 +53,84 @@
 				</div>
 			</div>
 		</nav>
-	<div id="cabecera" style="margin-top:50px;background-color:rgb(17,17,17);">
-		<img class="img-responsive" src="images/inicio.jpg" style="display: block;margin-left: auto;margin-right: auto;">
-	</div>
-	<div class="container" style='min-height: 100vh;'>
-		<div class="jumbotron" style="background:transparent !important">
-			<h2><b>Bienvenido a la web de Import Coffee</b></h2>
-			<p class="text-justify">
-			Sé bienvenido a la web de la asociación de programación de la Facultad
-			de Estudios Estadísticos de la Universidad Complutense de Madrid (UCM).
-			Aquí podrás encontrar multitud de información útil así como tutoriales,
-			así que ponte cómodo, instala tus dependencias e importa un café.
-			</p>
-			<div class="well">
-				pip install coffee <br> from Coffee import coffee
-			</div>
-			<h2><b>¿Qué hacemos en Import Coffee?</b></h2>
-			<p class="text-justify">
-			Somos un grupo de estudiantes de la Facultad de Estadística Aplicada de
-			la UCM, a los cuales nos apasiona el mundo de la tecnología y la programación.
-			Desde import coffee realizamos multitud de actividades y proyectos
-			(desde talleres y charlas hasta aplicaciones informáticas así como esta
-			maravillosa web).
-			</p>
-			<div class='row'>
-				<div class="col-lg-6">
-					<h3 class="text-center"><b>Proyectos y competiciones</b></h3>
-					<div class='caption'>
-						<p class="text-justify">
-						Ya sea una red neuronal para localizar basura especial, una
-						plataforma metereólogica o una aplicación de gestión de portafolios
-						financieros, aquí tiene cabida. En import coffee, los estudiantes
-						pueden ponerse en contacto entre ellos para realizar proyectos en
-						conjunto, de forma que cada uno pueda aportar en el aspecto en el
-						que mejor se desenvuelva y aprender de los demás en los que menos,
-						y, si se sienten realmente motivados, pueden participar por
-						equipos o individualmente en competiciones a nivel internacional
-						como las que ofrece la plataforma Kaggle o el SWERC.
-						</br></br>
-						Trabajamos con todas las tecnologías para elaborar el software del
-						futuro.
-						</p>
-					</div>
+		<div id="cabecera" style="margin-top:50px;background-color:rgb(17,17,17);">
+			<img class="img-responsive" src="images/inicio.jpg" style="display: block;margin-left: auto;margin-right: auto;">
+		</div>
+		<div class="container" style='min-height: 100vh;' id="container_">
+			<div class="jumbotron" style="background:transparent !important">
+				<h2><b>Bienvenido a la web de Import Coffee</b></h2>
+				<hr>
+				<p>
+				Sé bienvenido a la web de la asociación de programación de la Facultad
+				de Estudios Estadísticos de la Universidad Complutense de Madrid (UCM).
+				Aquí podrás encontrar multitud de información útil así como tutoriales,
+				así que ponte cómodo, instala tus dependencias e importa un café.
+				</p>
+				<div class="well" style="background-color: #f5f5f5 !important; color: black !important;">
+					pip install coffee <br> from Coffee import coffee
 				</div>
-				<div class="col-lg-6">
-					<div class="thumbnail" style="border:0px">
-						<img src="https://image.flaticon.com/icons/png/512/816/816236.png">
+				<h2><b>¿Qué hacemos en Import Coffee?</b></h2>
+				<hr>
+				<p>
+				Somos un grupo de estudiantes de la Facultad de Estadística Aplicada de
+				la UCM, a los cuales nos apasiona el mundo de la tecnología y la programación.
+				Desde import coffee realizamos multitud de actividades y proyectos
+				(desde talleres y charlas hasta aplicaciones informáticas así como esta
+				maravillosa web).
+				</p>
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="serviceBox">
+							<div class="service-icon">
+								<a href="#">
+									<i class="fa fa-trophy"></i>
+								</a>
+							</div>
+							<div>
+								<h3>Proyectos y competiciones</h3>
+								<p>Ya sea una red neuronal para localizar basura especial, una plataforma metereólogica o una aplicación de gestión de portafolios financieros, aquí tiene cabida.</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class='row'>
-				<div class="col-lg-6">
-					<h3 class="text-center"><b>Talleres y charlas</b></h3>
-					<div class='caption'>
-						<p class="text-justify">
-						Desde la asociación queremos ofrecer a la comunidad universitaria
-						la facilidad de aprender sobre temáticas relacionadas con la
-						tecnología de forma accesible y gratuita. En nuestras temáticas
-						están incluidos conceptos sencillos y generales para iniciados,
-						técnicas más específicas y avanzadas, y algunos aspectos a veces
-						olvidados en los grados como puede ser el flujo de trabajo o la
-						preparación de un entorno adecuado.
-						</p>
+					<div class="col-md-4 col-sm-6">
+						<div class="serviceBox">
+							<div class="service-icon">
+								<a href="#">
+									<i class="fa fa-users"></i>
+								</a>
+							</div>
+							<div>
+								<h3>Talleres y charlas</h3>
+								<p>Desde la asociación queremos ofrecer a la comunidad universitaria la facilidad de aprender sobre temáticas relacionadas con la tecnología de forma accesible y gratuita.</p>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="thumbnail" style="border:0px">
-						<img src="https://image.flaticon.com/icons/png/512/2317/2317495.png">
-					</div>
-				</div>
-			</div>
-			<div class='row'>
-				<div class="col-lg-6">
-					<h3 class="text-center"><b>Vida universitaria y salud</b></h3>
-					<div class='caption' height='100px'>
-						<p class="text-justify">
-						En import coffee estamos sumamente concienzados con la salud de
-						nuestros miembros y cómo está relacionada con la optimización de la
-						productividad, es por eso que promovemos la afinidad de una
-						alimentación saludable y ejercicio y la complementación del tiempo
-						de trabajo y el de ocio, de forma que los estudiantes puedan
-						disfrutar de su etapa universitaria plenamente. Aquí, los
-						estudiantes podrán encontrar compañeros con los que realizar
-						actividades culturales y al aire libre.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="thumbnail" style="border:0px">
-						<img id="huevo_pascua" src="https://image.flaticon.com/icons/png/512/401/401775.png">
+					<div class="col-md-4 col-sm-6">
+						<div class="serviceBox">
+							<div class="service-icon">
+								<a href="#">
+									<i class="fa fa-university"></i>
+								</a>
+							</div>
+							<div>
+								<h3>Vida universitaria y salud</h3>
+								<p>En import coffee estamos sumamente concienzados con la salud de nuestros miembros, es por eso que promovemos la afinidad de una alimentación saludable y ejercicio y la complementación del tiempo de trabajo y el de ocio.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 		<div class="footer text-center" style='background-color:#101010'>
 			</br>
-			<h2>Con la colaboración de:</h2>
+			<h2 class="white-text">Con la colaboración de:</h2>
 			</br>
 			<div class='row' style='margin-right: 0px;margin-left: 0px'>
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">UCM</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
+							<h3 class="media-heading white-text">UCM</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
 							<div class="modal fade" id="ucm" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -169,7 +148,7 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
+											<p>
 											Muchas gracias a la UCM y en especial a la facultad de estudios estadísticos
 											por apoyar este proyecto/asociación dotándonos de los materiales y consejos
 											que necesitamos.
@@ -191,8 +170,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Bla6</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
+							<h3 class="media-heading white-text">Bla6</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
 							<div class="modal fade" id="bla6" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -210,10 +189,10 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
-											Gracias a Bla6 por ayudarnos con la resolución de dudas y ayuda para la creación
-											de esta web. Bla6 es un profesional del diseño web y Sysadmin. No te olvides de
-											visitar su Gitlab para ver sus proyectos personales.
+											<p>
+												Gracias a Bla6 por ayudarnos con la resolución de dudas y ayuda para la creación
+												de esta web. Bla6 es un profesional del diseño web y Sysadmin. No te olvides de
+												visitar su Gitlab para ver sus proyectos personales.
 											</p>
 											<a href='https://gitlab.com/bla6' class="btn btn-info" role="button">Gitlab</a>
 										</div>
@@ -229,8 +208,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Carlos</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
+							<h3 class="media-heading white-text">Carlos</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
 							<div class="modal fade" id="carlos" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -249,8 +228,8 @@
 										</div>
 										<div class="modal-body">
 											<p class="text-justify">
-											Gracias a Carlos por su profesional trabajo en la creación del logo para la
-											asociación así como animaciones y demás artwork.
+												Gracias a Carlos por su profesional trabajo en la creación del logo para la
+												asociación así como animaciones y demás artwork.
 											</p>
 											<a href='https://www.behance.net/carlosalmendros8' class="btn btn-info" role="button">Behance</a>
 										</div>
@@ -268,18 +247,29 @@
 		</div>
 	</body>
 	<script>
-		function getUrlVars() {
-			var vars = {};
-			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-				vars[key] = value;
-			});
-			return vars;
+		function mantener_dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				document.getElementById("container_").classList.add("dark-mode-container");
+				document.getElementById("body_").classList.add("dark-mode-body");
+			}else{
+				document.getElementById("container_").classList.remove("dark-mode-container");
+				document.getElementById("body_").classList.remove("dark-mode-body");
+			}		
 		}
-		
-		var huevo_pascua = getUrlVars()["agua"];
-		
-		if (huevo_pascua == "True") {
-			document.getElementById("huevo_pascua").src = "https://instagram.fmad15-1.fna.fbcdn.net/v/t51.2885-15/e35/122155488_727884967935779_5565973961149330449_n.jpg?_nc_ht=instagram.fmad15-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=8OLKf4irfeYAX9GhA1p&_nc_tp=18&oh=4307d52f1a424dbf4bbd87c6c45be06a&oe=5FB7A873";
+		function dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				localStorage.setItem('dm', false);
+			}else{
+				localStorage.setItem('dm', true);
+			}
+			var element = document.getElementById("container_");
+			element.classList.toggle("dark-mode-container");
+			var element = document.getElementById("body_");
+			element.classList.toggle("dark-mode-body");
 		}
+		if(localStorage.getItem('dm') == null){
+			localStorage.setItem('dm', false);
+		}
+		mantener_dm();
 	</script>
 </html>
