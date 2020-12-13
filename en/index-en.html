@@ -11,8 +11,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link href="estilo.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
-	<body>
+	<body id="body_">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -30,8 +31,12 @@
 						<li class="active"><a href="index-en.html">Main page</a></li>
 						<li><a href="equipo-en.html">Team</a></li>
 						<li><a href="contacto-en.html">Contact</a></li>
+						<li><a href="https://guillermo-c-a.github.io/prueba/">Blog <span class="glyphicon glyphicon-wrench"></span></a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+						<form class="navbar-form navbar-left" style="margin-right:0px;margin-left:0px;color:#9d9d9d;">
+							<button type="button" class="btn btn-warning" onclick="dm()">Dark mode</button>
+						</form>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 								<span class="flag-icon flag-icon-gb"></span>
@@ -50,7 +55,7 @@
 	<div id="cabecera" style="margin-top:50px;background-color:rgb(17,17,17);">
 		<img class="img-responsive" src="images/inicio.jpg" style="display: block;margin-left: auto;margin-right: auto;">
 	</div>
-	<div class="container" style='min-height: 100vh;'>
+	<div class="container" style='min-height: 100vh;' id="container_">
 		<div class="jumbotron" style="background:transparent !important">
 			<h2><b>Welcome to the Import Coffee webpage</b></h2>
 			<p class="text-justify">
@@ -59,10 +64,10 @@
 				you will find a lot of useful information as well as tutorials, so make
 				yourself comfortable, install your dependencies and import a coffee.
 			</p>
-			<div class="well">
-				pip install coffee <br> from Coffee import coffee
-			</div>
-			<h2><b>¿Qué hacemos en Import Coffee?</b></h2>
+				<div class="well" style="background-color: #f5f5f5 !important; color: black !important;">
+					pip install coffee <br> from Coffee import coffee
+				</div>
+			<h2><b>Our work in Import Coffee</b></h2>
 			<p class="text-justify">
 				We are a group of students from the Faculty of Applied Statistics at the
 				UCM, who are passionate about the world of technology and programming.
@@ -70,69 +75,54 @@
 				(from workshops and talks to computer applications as well as this
 				wonderful website).
 			</p>
-			<div class='row'>
-				<div class="col-lg-6">
-					<h3 class="text-center"><b>Proyectos y competiciones</b></h3>
-					<div class='caption'>
-						<p class="text-justify">
-							A neural network application to find space debris, a
-							meteorological station or a portfolio management software, here
-							we code it. In import coffee, members can get in touch with
-							other students in border to develop their own projects, so
-							every one can do what he is best at, and impulse each others
-							abilities. If they feel really motivated, they can participate,
-							as a team or by themselves, in international competitions like
-							could be those offered by Kaggle or the SWERC, among many
-							others.
-						</br></br>
-						We use all techonologies to create tomorrow's software.
-						</p>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="serviceBox">
+						<div class="service-icon">
+							<a href="#">
+								<i class="fa fa-trophy"></i>
+							</a>
+						</div>
+						<div>
+							<h3>Projects and competitions</h3>
+							<p>
+								Whether it be a neural network application to find space debris, a meteorological station
+								or a portfolio management software, we code it here.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="thumbnail" style="border:0px">
-						<img src="https://image.flaticon.com/icons/png/512/816/816236.png">
+				<div class="col-md-4 col-sm-6">
+					<div class="serviceBox">
+						<div class="service-icon">
+							<a href="#">
+								<i class="fa fa-users"></i>
+							</a>
+						</div>
+						<div>
+							<h3>Workshops and seminars</h3>
+							<p>
+								As members of import coffee, we want to provide the university community with the opportunity
+								to learn about technology related topics in the easiest and most captivating way possible. 
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class='row'>
-				<div class="col-lg-6">
-					<h3 class="text-center"><b>Talleres y charlas</b></h3>
-					<div class='caption'>
-						<p class="text-justify">
-							From import coffee, we want to offer the university community
-							the chance to learn about techonoly related themes in an easy
-							and free way. Among our topics, you could find easy and general
-							concepts for beginners, advanced analitic technics and some,
-							often forgotten in the college degree courses, aspects like
-							a proper workflow and work environment setup.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="thumbnail" style="border:0px">
-						<img src="https://image.flaticon.com/icons/png/512/2317/2317495.png">
-					</div>
-				</div>
-			</div>
-			<div class='row'>
-				<div class="col-lg-6">
-					<h3 class="text-center"><b>Vida universitaria y salud</b></h3>
-					<div class='caption' height='100px'>
-						<p class="text-justify">
-							In import coffee, we are really aware of our member health
-							importance and how it relates to an increase in productivity,
-							is that so, that we promote the proper combination of a healty
-							diet, exercise regularly and complementation of work and leisure
-							time, so that students can enjoy completely their university
-							years. Here, students can find other members they can do
-							cultural and open air activities.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="thumbnail" style="border:0px">
-						<img src="https://image.flaticon.com/icons/png/512/401/401775.png">
+				<div class="col-md-4 col-sm-6">
+					<div class="serviceBox">
+						<div class="service-icon">
+							<a href="#">
+								<i class="fa fa-university"></i>
+							</a>
+						</div>
+						<div>
+							<h3>University life and health</h3>
+							<p>
+								We encourage the proper balance between enjoying leisure time and working. In the association itself,
+								students can find other members they can do cultural and open-air activities with, or anything,
+								to experience the university life to its fullest.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -140,14 +130,14 @@
 	</div>
 		<div class="footer text-center" style='background-color:#101010'>
 			</br>
-			<h2>With the collaboration of:</h2>
+			<h2 class="white-text">With the collaboration of:</h2>
 			</br>
 			<div class='row' style='margin-right: 0px;margin-left: 0px'>
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">UCM</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#ucm">Información</button>
+							<h3 class="media-heading white-text">UCM</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ucm">More information</button>
 							<div class="modal fade" id="ucm" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -165,7 +155,7 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
+											<p>
 												Many thanks to the UCM and especially to the faculty of statistical studies for supporting this
 												association by providing us with the materials and advice we need.
 											</p>
@@ -175,7 +165,7 @@
 											</div>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
 								</div>
@@ -186,8 +176,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Bla6</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#bla6">Información</button>
+							<h3 class="media-heading white-text">Bla6</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#bla6">More information</button>
 							<div class="modal fade" id="bla6" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -205,7 +195,7 @@
 											</div>
 										</div>
 										<div class="modal-body">
-											<p class="text-justify">
+											<p>
 												Thanks to Bla6 for helping us with the resolution of problems and help for the creation of
 												this web. Bla6 is a professional web designer and Sysadmin. Don't forget to visit his Gitlab
 												to see his personal projects.
@@ -213,7 +203,7 @@
 											<a href='https://gitlab.com/bla6' class="btn btn-info" role="button">Gitlab</a>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
 								</div>
@@ -224,8 +214,8 @@
 				<div class="col-sm-4 col-md-4 col-lg-4">
 					<div class="media" style='padding:10px'>
 						<div class="media-body">
-							<h3 class="media-heading">Carlos</h3>
-							<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#carlos">Información</button>
+							<h3 class="media-heading white-text">Carlos</h3>
+							<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#carlos">More information</button>
 							<div class="modal fade" id="carlos" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -250,7 +240,7 @@
 											<a href='https://www.behance.net/carlosalmendros8' class="btn btn-info" role="button">Behance</a>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
 								</div>
@@ -262,4 +252,30 @@
 			</br>
 		</div>
 	</body>
+	<script>
+		function mantener_dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				document.getElementById("container_").classList.add("dark-mode-container");
+				document.getElementById("body_").classList.add("dark-mode-body");
+			}else{
+				document.getElementById("container_").classList.remove("dark-mode-container");
+				document.getElementById("body_").classList.remove("dark-mode-body");
+			}		
+		}
+		function dm(){
+			if(localStorage.getItem('dm') == 'true'){
+				localStorage.setItem('dm', false);
+			}else{
+				localStorage.setItem('dm', true);
+			}
+			var element = document.getElementById("container_");
+			element.classList.toggle("dark-mode-container");
+			var element = document.getElementById("body_");
+			element.classList.toggle("dark-mode-body");
+		}
+		if(localStorage.getItem('dm') == null){
+			localStorage.setItem('dm', false);
+		}
+		mantener_dm();
+	</script>
 </html>
